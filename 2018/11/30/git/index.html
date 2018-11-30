@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title: Gitdate: 2018-11-30 01:01:00tags:categories: git语法  创建版本库 打开程序并输入 $ mkdir simple $ cd simple $ pwd  ​    cd 是定位到这个仓库， pwd显示路径，-m后面输入的是本次提交的说明，可以输任何内容. $git add readme.txt 增加名为”readme.txt”的文本 $g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/11/30/git/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title: Gitdate: 2018-11-30 01:01:00tags:categories: git语法  创建版本库 打开程序并输入 $ mkdir simple $ cd simple $ pwd  ​    cd 是定位到这个仓库， pwd显示路径，-m后面输入的是本次提交的说明，可以输任何内容. $git add readme.txt 增加名为”readme.txt”的文本 $g">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-30T06:48:35.949Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="title: Gitdate: 2018-11-30 01:01:00tags:categories: git语法  创建版本库 打开程序并输入 $ mkdir simple $ cd simple $ pwd  ​    cd 是定位到这个仓库， pwd显示路径，-m后面输入的是本次提交的说明，可以输任何内容. $git add readme.txt 增加名为”readme.txt”的文本 $g">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/lib/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/lib/jquery/dist/jquery.min.js"></script>
+  
+  
+  
+  
+</head></html>
+<body>
+  <div id="wrapper">
+    <header id="header" class="clearfix">
+	<a id="logo" href="/" title="Hexo">Hexo</a>
+	
+	<nav id="nav-menu" class="clearfix">
+		<form id="search" method="post" action="./" role="search">
+			<input id="search-input" type="text" name="s" class="inputbox" value="Search" onfocus="if (value =='Search'){value =''}" onblur="if (value ==''){value='Search'}">
+		</form>
+		<ul>
+      
+				
+        <li><a class="main-nav-link" href="/">Home</a></li>
+      
+				
+        <li><a class="main-nav-link" href="/archives">Archives</a></li>
+      
+		</ul>
+	</nav>
+</header>
+    <section id="main" class="clearfix"><article class="post-detail">
+  <h1 class="post-title"><a href="/"></a></h1>
+  <ul class="post-meta">
+  <li><i class="fa fa-user"></i> Author John Doe</li>
+  <li><i class="fa fa-calendar"></i> Date Nov 30</li>
+  <li><i class="fa fa-folder"></i> Categories
+  
+    no_categories
+  
+  </li>
+</ul>
+  <div class="post-content">
+      
+      <p>title: Git<br>date: 2018-11-30 01:01:00<br>tags:<br>categories: git语法</p>
+<hr>
+<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><ol>
+<li><p>打开程序并输入</p>
+<p>$ mkdir simple</p>
+<p>$ cd simple</p>
+<p>$ pwd </p>
+<p>​    cd 是定位到这个仓库， pwd显示路径，-m后面输入的是本次提交的说明，可以输任何内容.</p>
+<p>$git add readme.txt</p>
+<p>增加名为”readme.txt”的文本</p>
+<p>$git commit -m”wrote a readme file”</p>
+<p>commit可以一次性提交很多内容。</p>
+<hr>
+<h2 id="时光穿梭机"><a href="#时光穿梭机" class="headerlink" title="时光穿梭机"></a>时光穿梭机</h2><p>$git status</p>
+<p>这个命令可以让我们时刻掌握仓库当前的状态</p>
+<p>$git diff</p>
+<p>查看具体修改的内容,git diff顾名思义就是查看difference，显示的格式正是Unix通用的diff格式</p>
+<p>$git log</p>
+<p>查看版本历史记录</p>
+<p>看起来乱的话我们也可以在<code>git log</code>命令后空格加入<code>--pretty=oneline</code></p>
+<p>￥git reset –hard HEAD^</p>
+<p>回退到上一个版本，用HEAD表示当前版本，也就是最新的提交。上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</p>
+<p>$git reflog</p>
+<p>查看所有的记录</p>
+<p><strong>重点！！！！！！</strong>，HEAD指向的版本是当前的版本，Git允许我在版本的历史之间穿梭，使用命令<code>git reset --hard commit_id</code>(commit_id替换成我们所看到的id，版本号不需要写全，6位就行)</p>
+<hr>
+<h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><p>工作区就是你在电脑里能看到的目录，比如我的simple文件夹就是一个工作区<br>版本库（Repository）工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。<br>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD</p>
+</li>
+</ol>
+<p>   git add把文件添加进去，实际上就是把文件修改<strong>添加到暂存区</strong>；</p>
+<p>   git commit提交更改，实际上就是把暂存区的所有内容<strong>提交到当前分支</strong>。</p>
+<p>   <strong><code>get add</code>命令就是把要提交的所有修改放到暂存区，然后执行<code>git commit</code>就可以就可以一次性把暂存区的所有修改提交到分支。</strong></p>
+<p>   <strong>注意</strong>，<code>git add</code>后要<code>git commit</code>后才能从暂存区转到master区，否则重叠的修改会无效。</p>
+<p>   第一次修改 -&gt; <code>git add</code> -&gt; 第二次修改 -&gt;<code>git add</code> -&gt; <code>git commit</code></p>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p>   改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>（file为你针对的文件），意思是把readme.txt文件在工作区的修改全部撤销。有两种情况<br>   一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；<br>   一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。<br>   总之，就是让这个文件回到最近一次git commit或git add时的状态。</p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><ul>
+<li><p>一般情况下，你通常直接在文件管理器中把没用的文件删了，或者用rm命令删了<br><code>git rm test.txt</code>(从版本库删除)</p>
+</li>
+<li><p>删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本<br><code>git checkout -- test.txt</code><br><code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code>创建SSH Key</p>
+<p>过程一直回车就行<br>如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>第2步：登陆GitHub，点击头像，打开setting，ssh and gpg keys<br>然后，点“New SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，然后add，确认密码，ok</p>
+<h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><p>首先，登陆GitHub，然后，在右上角+找到“new repository”按钮，创建一个新的仓库<br>填入自己的本地仓库名，直接确认</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改</p>
+<h4 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h4><p>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。<br>Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。</p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><h3 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h3><p>Git鼓励大量使用分支：<br>查看分支：<code>git branch</code><br>创建分支：<code>git branch &lt;name&gt;</code><br>切换分支：<code>git checkout &lt;name&gt;</code><br>创建+切换分支：<code>git checkout -b &lt;name&gt;</code><br>合并某分支到当前分支：<code>git merge &lt;name&gt;</code><br>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+</li>
+</ul>
+<hr>
+<p>   ​                                                Alos</p>
+
+  </div>
+  
+
+</article>
+
+<!-- Comments -->
+
+<!-- End Comments --></section>
+    <footer id="footer" role="contentinfo">
+    <div>&copy; 2018 <a href="/">Hexo</a>.
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Designed by <a href="http://rainylog.com" target="_blank">Rainy.</a>
+	</div>
+</footer><!-- end #footer -->
+
+  </div>
+  <script src="/lib/fancybox/dist/jquery.fancybox.min.js"></script>
+
+  <script src="/js/helper.js"></script>
+  <script src="/js/_third-party/gitment.js"></script>
+</body>
+</html>
